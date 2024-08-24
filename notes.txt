@@ -1,0 +1,16 @@
+## build boost
+
+1. cd boost_1_85_0 && ./bootstrap.sh
+
+2. add user-config.jam with contents:
+# using python : 3.8 : /media/frye/sda5/anaconda3/envs/python3.8 ;
+# using python : 3.9 : /media/frye/sda5/anaconda3/envs/python3.9 ;
+# using python : 3.10 : /media/frye/sda5/anaconda3/envs/python3.10 ;
+# using python : 3.11 : /media/frye/sda5/anaconda3/envs/python3.11 ;
+# using python : 3.12 : /media/frye/sda5/anaconda3/envs/python3.12 ;
+# must uncomment one at a time and build with command below
+
+3. build static libs for python versions with -fPIC
+
+## this flag was in there but i don't think it's needed --build-dir=/media/frye/sda5/tmp/build-boost
+./b2 --config=user-config.jam --with-python cxxflags=-fPIC cflags=-fPIC -a stage

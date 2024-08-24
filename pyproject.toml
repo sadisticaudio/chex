@@ -1,0 +1,18 @@
+[build-system]
+requires = ["scikit-build-core"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "chex"
+version = "0.0.1"
+requires-python = ">=3.8"
+
+[tool.scikit-build]
+build.verbose = true
+logging.level = "INFO"
+# ninja.minimum-version = ""
+build.tool-args = ["-j2"]
+# sdist.cmake = true
+
+[tool.scikit-build.cmake.define]
+PYVERSION = "3.11"
