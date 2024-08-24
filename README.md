@@ -2,7 +2,7 @@
 
 **Important**
 
-- This extension was created to speed up operations in the Progress Measures for Grokking via Mechanistic Interpretability colab demo. 
+- This extension was created to speed up operations in the Progress Measures for Grokking via Mechanistic Interpretability colab demo.
 
 
 ## Install
